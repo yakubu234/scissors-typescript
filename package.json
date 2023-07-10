@@ -1,0 +1,56 @@
+{
+  "name": "scissors-typescript",
+  "version": "1.0.0",
+  "description": "Scissors is a URL shortening app built using Node and ExpressJS that offers users a variety of useful features. With Scissors, users can shorten URLs and generate custom URLs with their own domain name. Additionally, users can create QR codes for their shortened URLs to use in their promotional materials or on their website.",
+  "main": "scissors.js",
+  "scripts": {
+    "start": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yakubu234/scissors-express.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yakubu234/scissors-express/issues"
+  },
+  "homepage": "https://github.com/yakubu234/scissors-express#readme",
+  "devDependencies": {
+    "@types/body-parser": "^1.19.2",
+    "@types/compression": "^1.7.2",
+    "@types/cookie-parser": "^1.4.3",
+    "@types/cors": "^2.8.13",
+    "@types/device-uuid": "^1.0.0",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.17",
+    "@types/express-session": "^1.17.7",
+    "@types/express-validator": "^3.0.0",
+    "@types/helmet": "^4.0.0",
+    "@types/ioredis": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/mongoose": "^5.11.97",
+    "@types/morgan": "^1.9.4",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "device-uuid": "^1.0.4",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.0.0",
+    "ioredis": "^5.3.2",
+    "jsonwebtoken": "^9.0.1",
+    "mongoose": "^7.3.2",
+    "morgan": "^1.10.0"
+  }
+}
