@@ -6,3 +6,4 @@ Scissors also provides basic analytics to users, allowing them to track their sh
 
 Overall, Scissors is a comprehensive URL shortening app that offers users the ability to customize their URLs, track analytics, and keep a history of their shortened links.
 # scissors-typescript
+this part is presently being implemented, check back 11/07/2023 08:00AM
