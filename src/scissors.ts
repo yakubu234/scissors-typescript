@@ -16,6 +16,7 @@ const { PORT, ALLOWED_ORIGIN, JWT_SECRETE, SESSION_SECRET, DOMAIN } = process.en
 
 import errorHandler from './utils/ErrorHandler';
 require( './utils/database.config');
+import router from './routes'; 
 
 const app = express();
 
@@ -46,6 +47,9 @@ app.use(helmet());
 app.get('/:urlID', async (req: express.Request, res: express.Response) => {
     res.end()
 });
+
+/** all route files here */
+app.use('/api/', router());
 
 /** Standard error handling */
 app.use(errorHandler)
