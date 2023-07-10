@@ -3,7 +3,7 @@ const Redis = require("ioredis");
 
 const { REDIS_HOST, REDIS_PORT, REDIS_TTL, REDIS_TIMEOUT, REDIS_PASSWORD } = process.env;
 
-let redis;
+let redis:any;
 
 ///*****************************************************************************/
 ///*****************************************************************************/
@@ -11,11 +11,11 @@ let redis;
 ///*****************************************************************************/
 ///*****************************************************************************/
 
-export const base64_encode = (data) => {
+export const base64_encode = (data:any) => {
     return Buffer.from(data).toString('base64');
 }
 
-export const base64_decode = (data) => {
+export const base64_decode = (data:any) => {
     return Buffer.from(data, 'base64').toString('ascii');
 }
 
@@ -32,12 +32,12 @@ export const base64_decode = (data) => {
         commandTimeout: REDIS_TIMEOUT,
         password: REDIS_PASSWORD
     });
-    redis.on("error", (err) => {
+    redis.on("error", (err:any) => {
         console.log(err);
     });
 })();
 
-export async function getCache(key) {
+export async function getCache(key:any) {
     try {
         const cacheData = await redis.get(key);
         if (cacheData) {
@@ -50,7 +50,7 @@ export async function getCache(key) {
 }
 
 // Set Redis cache Key with a given expiry
-export function setCache(key, data, ttl = REDIS_TTL) {
+export function setCache(key:any, data:any, ttl = REDIS_TTL) {
     try {
         redis.set(key, JSON.stringify(data), "EX", ttl);
     } catch (err) {
@@ -59,7 +59,7 @@ export function setCache(key, data, ttl = REDIS_TTL) {
 }
 
 // Remove given Redis cache key
-export async function removeCache(key) {
+export async function removeCache(key:any) {
     try {
 
         const cacheData = await redis.get(key);
@@ -72,7 +72,7 @@ export async function removeCache(key) {
     }
 }
 
-export const parseJson = (str) => {
+export const parseJson = (str:any) => {
     try {
         return JSON.parse(str);
     } catch (e) {
